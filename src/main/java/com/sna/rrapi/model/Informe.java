@@ -13,7 +13,7 @@ public class Informe {
 	private String descripcion;
 
 	public enum TipoInforme {
-
+		BASICO
 	}
 
 	public LocalDate getFecha() {

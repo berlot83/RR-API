@@ -1,39 +1,42 @@
 package com.sna.rrapi.services;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.support.GenericWebApplicationContext;
 import com.sna.rrapi.model.Referente;
 
 @Service
 public class JovenReferenteServiceImpl implements PersonaService<Referente>{
 
+	@Autowired
+	GenericWebApplicationContext context;
+	
 	@Override
 	public Referente save(Referente persona) {
-		// TODO Auto-generated method stub
-		return null;
+		return persona;
 	}
 
 	@Override
 	public Referente update(Referente persona) {
-		// TODO Auto-generated method stub
-		return null;
+		return persona;
 	}
 
 	@Override
 	public Referente delete(Referente persona) {
-		// TODO Auto-generated method stub
-		return null;
+		return persona;
 	}
 
 	@Override
 	public Referente get(String dni) {
-		// TODO Auto-generated method stub
-		return null;
+		Referente referente = (Referente) context.getBean("referente1");
+		return referente;
 	}
 
 	@Override
 	public List<Referente> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Referente> referente = (List<Referente>) context.getBean("referentes");
+		return referente;
 	}
 
 
